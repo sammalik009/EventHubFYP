@@ -13,11 +13,6 @@ class EventList extends React.Component{
         loading:true
     }
     componentDidMount(){
-        axios.post('http://127.0.0.1:8000/event/api/Events/search/',{
-            user:1,
-            search:'ahsan'
-        })
-        .then(res =>{console.log(res.data)});
         axios.get('http://127.0.0.1:8000/event/api/Events/get_events/')
         .then(res =>{
             this.setState({

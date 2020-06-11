@@ -694,12 +694,19 @@ def search(request):
     l2.sort(key=lambda x: x['count'], reverse=True)
     l3 = []
     l4 = []
-    for i in l1:
+    for i in l1[:10]:
         l3.append(i['user'])
-    for i in l2:
+    for i in l2[:10]:
         l4.append(i['event'])
+    l5 = []
+    for i in l4:
+        try:
+            l5.append(i.imagetable_set.all()[0])
+        except IndexError:
+            l5.append(ImageTable.objects.get(pk=4))
     serializer1 = EventsSerializer(l4, many=True)
     serializer2 = UsersSerializer(l3, many=True)
-    return Response({'users': serializer2.data, 'events': serializer1.data})
+    serializer3 = ImageTableSerializer(l5, many=True)
+    return Response({'users': serializer2.data, 'events': serializer1.data, 'images':serializer3.data})
 
 

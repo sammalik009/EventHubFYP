@@ -1,10 +1,11 @@
 import React from 'react';
-import { Layout, Badge } from 'antd';
+import { Layout, Badge, Input} from 'antd';
 import {Navbar, Nav, Button, Form,FormControl} from "react-bootstrap";
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/auth';
 import axios from 'axios';
 import styled from "styled-components";
+const { Search } = Input;
 
 const { Content, Footer } = Layout;
 const NavItem = styled.div`
@@ -27,6 +28,13 @@ class CustomLayout extends React.Component{
             .catch();
         }
     }
+    handleClick=(e)=>{
+        if(e.length>0){
+            console.log(e);
+            window.location.href = `/search/${e}/`;
+        }
+    }
+
     render(){ 
           return (
             <Layout className="layout">
@@ -36,8 +44,14 @@ class CustomLayout extends React.Component{
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">                    
-                                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                <Button variant="outline-info">Search</Button>             
+                                <Search
+                                placeholder="Search"
+                                onSearch={value => this.handleClick(value)}
+                                style={{ width: 300 }}
+                                enterButton='Search'
+                                variant="outline-info"
+                                size="large"
+                                />
                             </Nav>
                             <Form inline>
                                 <Nav className="mr-auto">

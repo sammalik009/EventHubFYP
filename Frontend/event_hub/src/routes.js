@@ -15,6 +15,7 @@ import OrganizerForm from './components/OrganizerForm';
 import ActivateUser from './components/ActivateUser';
 import Attendence from './components/Attendence';
 import UserProfile from './components/UserProfile';
+import SearchResults from './containers/SearchResults';
 import App2 from './App2';
 //import App2 from './containers/App2';
 import App3 from './App3';
@@ -60,6 +61,7 @@ const BaseRouter = () => (
         <Route exact path='/admin/events/happening_today/' component={App4}></Route>
         <Route exact path='/admin/events/happened/' component={App4}></Route>
         <Route exact path='/admin/events/approved/' component={App4}></Route>
+        <Route exact path='/search/:text/' component={SearchResults}></Route>
     </div>
 );
 

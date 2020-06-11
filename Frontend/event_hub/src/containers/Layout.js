@@ -27,6 +27,11 @@ class CustomLayout extends React.Component{
             .catch();
         }
     }
+    handleClick=(e)=>{
+        console.log(e);
+        console.log(event);
+        console.log(event.target.elements.search.value);
+    }
     render(){ 
           return (
             <Layout className="layout">
@@ -36,8 +41,8 @@ class CustomLayout extends React.Component{
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">                    
-                                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                <Button variant="outline-info">Search</Button>             
+                                <FormControl type="text" placeholder="Search" className="mr-sm-2" name='search' id='search'/>
+                                <Button variant="outline-info" onClick={()=>this.handleClick}>Search</Button>             
                             </Nav>
                             <Form inline>
                                 <Nav className="mr-auto">
@@ -82,6 +87,12 @@ class CustomLayout extends React.Component{
                     </Navbar>
                 </NavItem>            
                 <Content style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+                <Search
+      placeholder="input search text"
+      enterButton="Search"
+      size="large"
+      onSearch={value => console.log(value)}
+    />
                     {this.props.children}
                     </Content>
                 <Footer style={{ textAlign: 'center' }}>EventHub ©2020 Created by Usama Industries</Footer>
