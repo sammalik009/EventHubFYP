@@ -1,0 +1,17 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,91,8744,8160,4129,377,260,134,324,1071,13,109
+C:\Users\USAMA\Desktop\FYP2\event_hub\src,91,8744,8160,4129,377,260,134,324,1071,13,109
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\components,39,3872,3688,1724,136,108,49,76,198,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\components\AdminFolder,7,899,884,318,28,15,8,0,9,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\components\AdminFolder\AdminEventsFolder,4,521,513,184,16,8,4,0,4,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\components\AdminFolder\AdminUsersFolder,3,378,371,134,12,7,4,0,5,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\components\Apps,4,162,135,74,12,24,0,3,12,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\containers,32,4060,3770,1922,194,87,79,203,516,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\containers\LayoutsFolder,4,370,361,217,33,9,4,0,5,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\containers\OrganizerFolder,7,950,925,442,43,14,18,11,37,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\containers\Profile,1,57,56,25,2,1,1,0,1,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\elements,1,49,47,18,3,2,2,0,2,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\routes,4,128,123,115,0,4,0,1,4,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\store,4,173,160,85,22,13,2,0,2,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\store\actions,2,115,106,64,11,9,2,0,2,0,0
+C:\Users\USAMA\Desktop\FYP2\event_hub\src\store\reducers,1,52,48,19,10,4,0,0,0,0,0
