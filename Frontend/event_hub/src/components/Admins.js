@@ -87,8 +87,8 @@ class Admins extends React.Component{
                 attended : res.data.attended[i],
                 ratio : res.data.ratios[i],
                 organized : res.data.organized[i],
-                sold : res.data.sold[i],
-                rating : res.data.rating[i]
+                sold : parseFloat(res.data.sold[i]).toFixed(2),
+                rating : parseFloat(res.data.rating[i]).toFixed(2)
             });
           }
           this.setState({
